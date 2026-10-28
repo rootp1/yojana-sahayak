@@ -1,0 +1,276 @@
+{
+  "_comment": "Hand-reviewed eligibility rules for high-impact schemes. These replace the auto-extracted rules for the listed slugs. Keep in sync with official guidelines.",
+  "pm-kisan": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "farmer"
+      ]
+    },
+    {
+      "field": "incomeTaxPayer",
+      "op": "eq",
+      "value": false
+    },
+    {
+      "field": "govtEmployee",
+      "op": "eq",
+      "value": false
+    }
+  ],
+  "pmay-g": [
+    {
+      "field": "area",
+      "op": "in",
+      "value": [
+        "rural"
+      ]
+    },
+    {
+      "field": "hasPuccaHouse",
+      "op": "eq",
+      "value": false
+    }
+  ],
+  "pmuy": [
+    {
+      "field": "gender",
+      "op": "in",
+      "value": [
+        "female"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    }
+  ],
+  "pmuy2": [
+    {
+      "field": "gender",
+      "op": "in",
+      "value": [
+        "female"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    }
+  ],
+  "apy": [
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    },
+    {
+      "field": "age",
+      "op": "lte",
+      "value": 40
+    },
+    {
+      "field": "incomeTaxPayer",
+      "op": "eq",
+      "value": false
+    }
+  ],
+  "pmjjby": [
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    },
+    {
+      "field": "age",
+      "op": "lte",
+      "value": 50
+    }
+  ],
+  "pmsby": [
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    },
+    {
+      "field": "age",
+      "op": "lte",
+      "value": 70
+    }
+  ],
+  "nsap-ignoaps": [
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 60
+    },
+    {
+      "field": "bpl",
+      "op": "eq",
+      "value": true
+    }
+  ],
+  "ignwps": [
+    {
+      "field": "gender",
+      "op": "in",
+      "value": [
+        "female"
+      ]
+    },
+    {
+      "field": "maritalStatus",
+      "op": "in",
+      "value": [
+        "widowed"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 40
+    },
+    {
+      "field": "age",
+      "op": "lte",
+      "value": 79
+    },
+    {
+      "field": "bpl",
+      "op": "eq",
+      "value": true
+    }
+  ],
+  "igndps": [
+    {
+      "field": "disability",
+      "op": "gte",
+      "value": 80
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    },
+    {
+      "field": "age",
+      "op": "lte",
+      "value": 79
+    },
+    {
+      "field": "bpl",
+      "op": "eq",
+      "value": true
+    }
+  ],
+  "nfbs": [
+    {
+      "field": "bpl",
+      "op": "eq",
+      "value": true
+    }
+  ],
+  "pmmvy": [
+    {
+      "field": "pregnant",
+      "op": "eq",
+      "value": true
+    },
+    {
+      "field": "gender",
+      "op": "in",
+      "value": [
+        "female"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 19
+    }
+  ],
+  "ssy": [],
+  "pm-svanidhi": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "street_vendor"
+      ]
+    }
+  ],
+  "pmv": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "artisan"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    },
+    {
+      "field": "govtEmployee",
+      "op": "eq",
+      "value": false
+    }
+  ],
+  "kcc": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "farmer",
+        "fisherman"
+      ]
+    }
+  ],
+  "pmfby": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "farmer"
+      ]
+    }
+  ],
+  "mgnrega": [
+    {
+      "field": "area",
+      "op": "in",
+      "value": [
+        "rural"
+      ]
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 18
+    }
+  ],
+  "pmjdy": [
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 10
+    }
+  ],
+  "pmmy": [
+    {
+      "field": "occupation",
+      "op": "in",
+      "value": [
+        "entrepreneur",
+        "artisan",
+        "street_vendor"
+      ]
+    }
+  ]
+}

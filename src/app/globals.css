@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #fffaf3;
+  --surface: #ffffff;
+  --surface-2: #fdf1e2;
+  --text: #1f1a14;
+  --muted: #5f5448;
+  --border: #ead9c4;
+  --brand: #c2410c; /* saffron */
+  --brand-ink: #ffffff;
+  --brand-soft: #ffedd5;
+  --green: #15803d;
+  --green-soft: #dcfce7;
+  --amber: #a16207;
+  --amber-soft: #fef3c7;
+  --danger: #b91c1c;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #15120e;
+    --surface: #1f1b16;
+    --surface-2: #2a241d;
+    --text: #f5efe6;
+    --muted: #bfb3a3;
+    --border: #3a3128;
+    --brand: #fb923c;
+    --brand-ink: #1a0f05;
+    --brand-soft: #3b2412;
+    --green: #4ade80;
+    --green-soft: #133b22;
+    --amber: #fbbf24;
+    --amber-soft: #3a2e0d;
+    --danger: #f87171;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root[data-theme="dark"] {
+  --bg: #15120e;
+  --surface: #1f1b16;
+  --surface-2: #2a241d;
+  --text: #f5efe6;
+  --muted: #bfb3a3;
+  --border: #3a3128;
+  --brand: #fb923c;
+  --brand-ink: #1a0f05;
+  --brand-soft: #3b2412;
+  --green: #4ade80;
+  --green-soft: #133b22;
+  --amber: #fbbf24;
+  --amber-soft: #3a2e0d;
+  --danger: #f87171;
 }
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-noto), var(--font-noto-deva), system-ui, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* 16px+ inputs stop iOS from zooming on focus */
+input, select, textarea { font-size: 18px; }
+
+button, a { touch-action: manipulation; }
+
+@media (hover: hover) {
+  .hover-lift:hover { border-color: var(--brand); }
+}
+
+.prose-chat a { color: var(--brand); text-decoration: underline; font-weight: 600; }
+.prose-chat ul { list-style: disc; padding-left: 1.25rem; margin: 0.4rem 0; }
+.prose-chat ol { list-style: decimal; padding-left: 1.25rem; margin: 0.4rem 0; }
+.prose-chat p { margin: 0.35rem 0; }
+.prose-chat strong { font-weight: 700; }

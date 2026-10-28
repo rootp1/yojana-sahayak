@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // The scheme database is read from disk at runtime; make sure it ships with every function.
+  outputFileTracingIncludes: {
+    "/**": ["./data/schemes.json"],
+  },
   turbopack: {
     rules: {
       "*.css": {
